@@ -14,7 +14,7 @@ const Restaurante = ({ restaurante }: RestauranteProps) => {
 
   useEffect(() => {
     //obter pratos
-    axios.get<IPrato[]>('http://localhost:8000/api/v1/restaurantes/${restaurante.id}/pratos/')
+    axios.get<IPrato[]>(`http://localhost:8000/api/v1/restaurantes/${restaurante.id}/pratos/`)
     .then(resposta => {
       setPratos(resposta.data)
     })
@@ -25,7 +25,7 @@ const Restaurante = ({ restaurante }: RestauranteProps) => {
       <h2>{restaurante.nome}</h2>
     </div>
     <div>
-      {restaurante.pratos?.map(item => <Prato prato={item} key={item.id} />)}
+      {pratos?.map(item => <Prato prato={item} key={item.id} />)}
     </div>
   </section>)
 }
