@@ -1,3 +1,4 @@
+import { Button, TextField } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { IPaginacao } from '../../interfaces/IPaginacao';
@@ -39,6 +40,15 @@ const ListaRestaurantes = () => {
     {proximaPagina && <button onClick={verMais}>
       ver mais
     </button>}
+    <div>
+      <form>
+        <TextField>
+          <Button>
+
+          </Button>
+        </TextField>
+      </form>
+    </div>
   </section>)
 }
 
