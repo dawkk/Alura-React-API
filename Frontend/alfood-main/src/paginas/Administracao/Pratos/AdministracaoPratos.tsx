@@ -23,8 +23,8 @@ const AdministracaoPratos = () => {
         http.delete(`pratos/${pratoAhSerExcluido.id}/`)
             .then(() => {
               //constante para listar todos os pratos e verificar um por um, se o id daquele prato é igual ao id que está sendo excluido, se for diferente, segue para setPratos onde refaz a lista dos pratos atualizada, SEM o que foi solicitado a ser excluido
-                const listaPrato = pratos.filter(prato => prato.id !== pratoAhSerExcluido.id)
-                setPratos([...listaPrato])
+                const listaPratos = pratos.filter(prato => prato.id !== pratoAhSerExcluido.id)
+                setPratos([...listaPratos])
             })
     }
 
